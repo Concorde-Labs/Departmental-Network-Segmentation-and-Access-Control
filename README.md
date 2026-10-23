@@ -40,8 +40,7 @@ The network was designed using the following infrastructure:
 Each department connects to a dedicated switch, with the router providing connectivity between the three networks.
 
 ### Network Topology Diagram
-
-![Departmental Network Topology](Screenshots/network-topology.png)
+![Departmental Network Topology](Screenshots/01-network-topology.png)
 
 ## Tools and Technologies
 
@@ -71,15 +70,15 @@ Verified DHCP-assigned IPv4 addresses, subnet masks, and gateways on departmenta
 
 **IT Department IP Configuration**
 
-![IT IP Configuration](Screenshots/it-ip-configuration.png)
+![IT PC IP Configuration](Screenshots/02-it-pc-ip-configuration.png)
 
 **Sales Department IP Configuration**
 
-![Sales IP Configuration](Screenshots/sales-ip-configuration.png)
+![Sales PC IP Configuration](Screenshots/03-sales-pc-ip-configuration.png)
 
 **HR Department IP Configuration**
 
-![HR IP Configuration](Screenshots/hr-ip-configuration.png)
+![HR PC IP Configuration](Screenshots/04-hr-pc-ip-configuration.png)
 
 ### 3. Network Connectivity Testing
 
@@ -87,7 +86,7 @@ Performed ICMP ping tests to verify communication between departmental networks.
 
 A successful ping from an HR PC to an IT PC confirmed network reachability.
 
-![Successful HR-to-IT Ping](Screenshots/hr-to-it-ping.png)
+![Successful HR-to-IT Ping](Screenshots/05-hr-to-it-successful-ping.png)
 
 ### 4. Extended ACL Implementation
 
@@ -108,15 +107,14 @@ interface gig0/0/1
  ip access-group SALES_IT in
 ```
 
-![Router ACL Configuration](Screenshots/router-acl-configuration.png)
+![Successful HR-to-IT Ping](Screenshots/05-hr-to-it-successful-ping.png)
 
 ### 5. Access Control Validation
 
 Tested connectivity from a Sales PC to an IT PC after implementing the ACL.
 
 The ping test failed, demonstrating that the configured ICMP restriction was enforced.
-
-![Blocked Sales-to-IT Ping](Screenshots/sales-to-it-blocked-ping.png)
+![Blocked Sales-to-IT Ping](Screenshots/06-sales-to-it-failed-ping.png)
 
 ### 6. HTTP Service Validation
 
@@ -124,7 +122,7 @@ Verified that a Sales PC could still access the HTTP service hosted on the IT de
 
 This confirmed that the ACL restricted the specified ICMP traffic without blocking permitted HTTP communication.
 
-![Sales HTTP Access](Screenshots/sales-http-access.png)
+![Sales HTTP Server Access](Screenshots/08-sales-http-server-access.png)
 
 ## Results and Findings
 
