@@ -156,4 +156,4 @@ The implementation highlights how technical controls can support organizational 
 
 - **Field:** Governance, Risk, and Compliance (GRC)
 - **Location:** Canada
-- **Email:** [concordekwonna@gmail.com]
+- **Email:** concordekwonna@gmail.com
